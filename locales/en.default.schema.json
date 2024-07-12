@@ -511,6 +511,9 @@
         "name": "Announcement bar"
       }
     },
+    "header-new":{
+      "name": "Header new",
+    },
     "apps": {
       "name": "Apps",
       "settings": {

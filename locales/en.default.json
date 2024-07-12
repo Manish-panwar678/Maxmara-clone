@@ -281,6 +281,10 @@
         "other": "{{ count }} items"
       }
     },
+
+    "header-new":{
+      "header-new":"Header new"
+    },
     "cart": {
       "title": "Your cart",
       "caption": "Cart items",
