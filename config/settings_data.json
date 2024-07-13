@@ -136,6 +136,10 @@
       "announcement-bar-new": {
         "type": "announcement-bar-new",
         "settings": {
+          "first_txt": "Customer Service",
+          "second_txt": "Free shipping and Returns    |   Subscribe to get 10% Off",
+          "third_txt": "Find a store",
+          "background": "#000000"
         }
       },
       "header-new": {

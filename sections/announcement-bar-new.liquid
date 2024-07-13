@@ -1,0 +1,87 @@
+<div class="announcement-bar-new" style="background:{{ section.settings.background }};">
+    <div class="page-width bar-content">
+      {% if section.settings.first_txt != blank %}
+        <div class="customer-service-text">
+           <span>{{section.settings.first_txt}}</span>
+           
+        </div>
+      {% endif %}
+
+      {% if section.settings.second_txt != blank %}
+        <div class="customer-service-text">
+           <span>{{section.settings.second_txt}}</span>
+        </div>
+      {% endif %}
+
+      {% if section.settings.third_txt != blank %}
+        <div class="customer-service-text">
+           <span>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.992 19.349C6.372 18.381 1 14.704 1 8.5C1 5.677 3.224 1.5 8 1.5C12.775 1.5 15 5.677 15 8.5C15 14.503 10.072 18.1 7.992 19.349ZM8 0.5C2.611 0.5 0 5.187 0 8.5C0 16.473 7.944 20.472 8 20.5C8 20.472 16 16.473 16 8.5C16 5.187 13.333 0.5 8 0.5ZM8 11.5C6.621 11.5 5.5 10.379 5.5 9C5.5 7.621 6.621 6.5 8 6.5C9.379 6.5 10.5 7.621 10.5 9C10.5 10.379 9.379 11.5 8 11.5ZM8 5.5C6.067 5.5 4.5 7.068 4.5 9C4.5 10.933 6.067 12.5 8 12.5C9.932 12.5 11.5 10.933 11.5 9C11.5 7.068 9.932 5.5 8 5.5Z" fill="#fff"></path>
+                </svg>
+                {{section.settings.third_txt}}
+            </a></span>
+        </div>
+      {% endif %}
+
+      {% comment %} <div class="tooltip">
+        
+            <div class="tooltip-content">
+                <h3>Need help?</h3>
+                <p>Phone: Mon/sun 10am - 10pm </p>
+
+                <div class="contact-links">
+                    <ul>
+                        <li>
+                           <a href=""></a> 
+                        </li>
+
+                        <li>
+                            <a href="#"></a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           </div>
+           {% endcomment %}
+    </div> 
+</div>
+
+{%  schema  %} 
+    {
+        "name":"Announcement bar new",
+        "settings": [
+            {
+                "type":"text",
+                "id":"first_txt",
+                "label": "Enter the first text",
+                "default":"Customer Service"
+            },
+            {
+                "type":"text",
+                "id":"second_txt",
+                "label": "Enter the second text",
+                "default":"Free shipping and Returns    |   Subscribe to get 10% Off"
+            },
+            {
+                "type":"text",
+                "id":"third_txt",
+                "label": "Enter the third text",
+                "default":"Find a store"
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Background"
+            }
+        ]
+    }
+     
+    {% endschema %}
