@@ -1,5 +1,7 @@
+{{ 'announcment-bar-new.css' |  asset_url |  stylesheet_tag }}
 <div class="announcement-bar-new" style="background:{{ section.settings.background }};">
-    <div class="page-width bar-content">
+    <div class="page-width">
+      <div class="bar-content">
       {% if section.settings.first_txt != blank %}
         <div class="customer-service-text">
            <span>{{section.settings.first_txt}}</span>
@@ -8,13 +10,13 @@
       {% endif %}
 
       {% if section.settings.second_txt != blank %}
-        <div class="customer-service-text">
+        <div class="free-shipping-text">
            <span>{{section.settings.second_txt}}</span>
         </div>
       {% endif %}
 
       {% if section.settings.third_txt != blank %}
-        <div class="customer-service-text">
+        <div class="store-locator">
            <span>
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21" fill="none">
@@ -51,6 +53,7 @@
             </div>
            </div>
            {% endcomment %}
+           </div>
     </div> 
 </div>
 
