@@ -145,6 +145,7 @@
       "header-new": {
         "type": "header-new",
         "settings": {
+          "logo_img": "shopify:\/\/shop_images\/MM_logo_e120fbdf-e886-4b7f-964a-5e5ccb0f7672.svg"
         }
       }
     },
