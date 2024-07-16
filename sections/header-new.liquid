@@ -1,7 +1,18 @@
 {{ 'header-new.css' |  asset_url |  stylesheet_tag }}
 
 <header class="header-new">
+  <div class="header-new-inner">
     <div class="page-width">
+        <div class="logo-container-dektop">
+                    <a>
+                    <picture>
+                        <source media="(min-width:768px)" srcset="{{ section.settings.logo_img |  img_url: '200x' }}">
+                        <img src="{{ section.settings.logo_img |  img_url: '200x' }}" alt="logo-image-desktop">
+                    </picture>
+                    </a>
+                </div>
+      <div class="content-wrap">
+
         <div class="header-new-content">
             <div class="logo-icon-wrapper">
                 <div class="logo-container">
@@ -44,28 +55,28 @@
            
 
             <button class="hamburger-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon" width="22" height="21" viewBox="0 0 22 21" fill="none">
-                <path d="M1.00977 3.03101L21.0097 3.05931L21.0083 4.05931L1.00835 4.031L1.00977 3.03101Z" fill="black"></path>
-                <path d="M1.00127 9.031L21.0013 9.0593L20.9998 10.0593L0.99986 10.031L1.00127 9.031Z" fill="black"></path>
-                <path d="M0.992784 15.031L20.9928 15.0593L20.9913 16.0593L0.991369 16.031L0.992784 15.031Z" fill="black"></path>
-            </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon" width="22" height="21" viewBox="0 0 22 21" fill="none">
+                    <path d="M1.00977 3.03101L21.0097 3.05931L21.0083 4.05931L1.00835 4.031L1.00977 3.03101Z" fill="black"></path>
+                    <path d="M1.00127 9.031L21.0013 9.0593L20.9998 10.0593L0.99986 10.031L1.00127 9.031Z" fill="black"></path>
+                    <path d="M0.992784 15.031L20.9928 15.0593L20.9913 16.0593L0.991369 16.031L0.992784 15.031Z" fill="black"></path>
+                </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none" class="close-icon">
-      <path d="M13.6416 0L7.46824 5.38276L1.29689 0L0.587494 0.617674L6.76085 6.00044L0.587494 11.3823L1.29689 12L7.46824 6.61811L13.6416 12L14.35 11.3823L8.17764 6.00044L14.35 0.617674L13.6416 0Z" fill="black"></path>
-    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 15 12" fill="none" class="close-icon">
+                   <path d="M13.6416 0L7.46824 5.38276L1.29689 0L0.587494 0.617674L6.76085 6.00044L0.587494 11.3823L1.29689 12L7.46824 6.61811L13.6416 12L14.35 11.3823L8.17764 6.00044L14.35 0.617674L13.6416 0Z" fill="black"></path>
+                </svg>
             </button>
         </div>
-    </div>
-<!-- nav links starts here-->
-    <nav class="nav-links">
-        <div class="nav-links-inner">
+
+        <nav class="nav-links">
+
+            <div class="nav-links-inner">
             <ul>
             {% for link in linklists.main-menu.links %} 
             <li>
                 <a href="{{ link.url }}">
                 {{ link.title |  upcase }}
                 </a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="arrow-right">
                     <path d="M5.6383 14L5 13.2868L9.7234 8.0005L5 2.71524L5.6383 2L11 8.0005L5.6383 14Z" fill="black"></path>
                 </svg>
             </li>
@@ -116,8 +127,17 @@
             </div>
             </div>
             </div>
-        </div>
-    </nav>
+            </div>
+
+        </nav>
+      </div>
+    </div>
+
+    
+  </div>
+<!-- nav links starts here-->
+  
+    
 </header>
 
 <script>
