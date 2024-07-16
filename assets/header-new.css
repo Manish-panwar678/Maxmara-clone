@@ -1,6 +1,4 @@
-body{
-    overflow: hidden;
-}
+
 
 .header-new{
     position: relative;
@@ -19,13 +17,13 @@ body{
 .logo-icon-wrapper{
     display: flex;
     justify-content: space-between;
-    flex: 0 0 90%;
-    max-width: 90%;
+    flex: 1;
 }
 
 .icons button , .hamburger-btn,.drawer-icons button{
     background: none;
     border: none;
+    padding: 0;
 }
 
 .logo-container img{
@@ -41,9 +39,9 @@ button.profile-icon{
 }
 
 .icons{
-    gap: 15px;
+    gap: 24px;
     display: flex;
-    margin-right: 5px;
+    margin-right: 19px;
 }
 
 nav{
@@ -137,4 +135,121 @@ nav .nav-links-inner{
     width: 100%;
     border-top: 1px solid rgba(216, 216, 216, 1);
     background-color: #fff;
+}
+
+.logo-container-dektop{
+    display: none;
+}
+
+@media screen and (min-width:768px){
+    .logo-icon-wrapper{
+        order: 2;
+        padding-left: 60px;
+    }
+
+    button.profile-icon{
+        display: block;
+    }
+
+    .icons{
+        margin-right: 0;
+    }
+
+    .customer-service-text span{
+        padding-left: 26px;
+    }
+
+    nav{
+        width: 40%;
+    }
+
+    .drawer-icons{
+        display: none;
+    }
+
+    .header-new.header-top .icons .search-icon , .header-new.header-top .icons .cart-icon ,.header-new.header-top .icons .wishlist-icon{
+        display: block;
+    }
+
+    .header-new.header-top{
+        top: 34px;
+        
+    }
+}
+
+@media screen and (min-width:1024px){
+    .logo-container{
+        display: none;
+    }
+
+    /* .header-new-content{
+        justify-content: flex-end;
+    }  */
+
+    nav{
+    position: relative;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    }
+
+    .content-wrap{
+        display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li .arrow-right{
+        display: none;
+    }
+
+    .hamburger-btn{
+        display: none;
+    }
+
+    .logo-container-dektop{
+        display: block;
+        text-align: center;
+    }
+
+    /* .logo-icon-wrapper{
+        flex: 0 0 30%;
+        justify-content: flex-end;
+    } */
+
+    /* nav{
+        width: 70%;
+    height: 100%;
+    top: 0;
+    background: transparent;
+    left: auto;
+    }
+
+    nav ul{
+        margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    left: 0;
+    justify-content: space-between;
+    }
+
+    nav ul li .arrow-right{
+        display: none;
+    }
+
+    .hamburger-btn{
+        display: none;
+    } */
+
+    /* .nav-links .page-width{
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 100%;
+    } */
 }
