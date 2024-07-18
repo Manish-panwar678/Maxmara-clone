@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "image_banner": {
@@ -34,6 +43,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -68,6 +78,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -79,6 +90,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -133,6 +145,7 @@
         "product",
         "collection-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -146,6 +159,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -194,6 +208,7 @@
         "column2",
         "column3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -242,6 +257,7 @@
         "text_bFC9Jc",
         "button_hmCbc4"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/thread-image.jpg",
         "height": "adapt",
@@ -257,6 +273,43 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "category_list_URCKXQ": {
+      "type": "category-list",
+      "blocks": {
+        "slide_BTYFhK": {
+          "type": "slide",
+          "settings": {
+            "collection": "bags"
+          }
+        },
+        "slide_bJB9QK": {
+          "type": "slide",
+          "settings": {
+            "collection": "dresses"
+          }
+        },
+        "slide_7ewC7f": {
+          "type": "slide",
+          "settings": {
+            "collection": "shirts"
+          }
+        },
+        "slide_8nn9Tp": {
+          "type": "slide",
+          "settings": {
+            "collection": "trousers"
+          }
+        }
+      },
+      "block_order": [
+        "slide_BTYFhK",
+        "slide_bJB9QK",
+        "slide_7ewC7f",
+        "slide_8nn9Tp"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -266,6 +319,7 @@
     "collage",
     "video",
     "multicolumn",
-    "image_with_text_AT7KYX"
+    "image_with_text_AT7KYX",
+    "category_list_URCKXQ"
   ]
 }
