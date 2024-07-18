@@ -1,0 +1,39 @@
+<category-list>
+  <div class="category-products">
+    <ul>
+      {% for  block in section.blocks%}
+         <li>
+            {%  render 'category-card' , block:block , collection_card:block.settings.collection %} 
+         </li>
+      {% endfor %}
+    </ul>
+  </div>
+</category-list>
+
+{%  schema  %} 
+    {
+        "name":"Category slider",
+        "settings": [
+            
+        ],
+        "blocks": [
+            {
+                "name":"collection",
+                "type":"slide",
+                "settings": [
+                    {
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "Select the collection"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Category slider"
+            }
+        ]
+    }
+     
+    {% endschema %}

@@ -1,0 +1,13 @@
+<div class="card-wrapper">
+    <div class="card">
+        {%- if collection_card.featured_image -%}
+           <div class="card__media">
+            <a href="{{ collection_card.url }}">
+              <picture>
+                 <img src="{{ collection_card.featured_image | img_url: '200x' }}" loading="lazy"/>
+              </picture>
+            </a>
+           </div>
+        {% endif %}
+    </div>
+</div>
