@@ -1,0 +1,21 @@
+<div class="card-wrapper  keen-slider__slide">
+    <div class="card">
+        {%- if collection_card.featured_image -%}
+           <div class="card__media">
+            <a href="{{ collection_card.url }}">
+              <picture>
+                 <img src="{{ collection_card.featured_image | img_url: '200x' }}" loading="lazy" style="position: absolute; top:0;
+                 left:0;width:100%;height:100%;object-fit:cover;"/>
+              </picture>
+            </a>
+           </div>
+           
+           {% assign categoryTitle = collection_card.title |  upcase %}
+           <div class="category-title">
+             <a href="{{ collection_card.url }}" class="collection-link">
+              <h3 class="category-head">{{ categoryTitle }}</h3>
+            </a>
+           </div>
+        {% endif %}
+    </div>
+</div>

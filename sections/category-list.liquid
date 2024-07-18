@@ -1,0 +1,38 @@
+<script src="{{ 'keen-slider.js' | asset_url  }}" defer="defer"></script>
+{{ 'category-list.css' |  asset_url |  stylesheet_tag }}
+
+<category-list class="category-list">
+  <div class="category-products keen-slider" id="my-keen-slider">
+      {% for  block in section.blocks%}
+            {%  render 'category-card' , block:block , collection_card:block.settings.collection %} 
+      {% endfor %}
+  </div>
+</category-list>
+
+{%  schema  %} 
+    {
+        "name":"Category slider",
+        "settings": [
+            
+        ],
+        "blocks": [
+            {
+                "name":"collection",
+                "type":"slide",
+                "settings": [
+                    {
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "Select the collection"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Category slider"
+            }
+        ]
+    }
+     
+    {% endschema %}
