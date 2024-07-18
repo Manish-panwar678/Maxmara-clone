@@ -1,12 +1,11 @@
-<category-list>
-  <div class="category-products">
-    <ul>
+<script src="{{ 'keen-slider.js' | asset_url  }}" defer="defer"></script>
+{{ 'category-list.css' |  asset_url |  stylesheet_tag }}
+
+<category-list class="category-list">
+  <div class="category-products keen-slider" id="my-keen-slider">
       {% for  block in section.blocks%}
-         <li>
             {%  render 'category-card' , block:block , collection_card:block.settings.collection %} 
-         </li>
       {% endfor %}
-    </ul>
   </div>
 </category-list>
 

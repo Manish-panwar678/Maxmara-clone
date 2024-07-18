@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
+    
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -52,6 +53,12 @@
 
       main#MainContent {
         padding-top: 92px;
+      }
+
+      @media screen and (min-width:1024px){
+        main#MainContent {
+        padding-top: 189px;
+      }
       }
 
       {% for scheme in settings.color_schemes -%}
@@ -287,6 +294,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js" defer="defer"></script>
+  
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
