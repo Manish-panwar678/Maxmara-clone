@@ -301,6 +301,13 @@
       ],
       "settings": {
       }
+    },
+    "hero_banner_RMNn4C": {
+      "type": "hero-banner",
+      "settings": {
+        "mobile_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg",
+        "desktop_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg"
+      }
     }
   },
   "order": [
@@ -311,6 +318,7 @@
     "video",
     "multicolumn",
     "image_with_text_AT7KYX",
-    "category_list_URCKXQ"
+    "category_list_URCKXQ",
+    "hero_banner_RMNn4C"
   ]
 }

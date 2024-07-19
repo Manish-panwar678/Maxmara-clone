@@ -4,12 +4,12 @@
 }
 
 .category-list .card{
-    width: 120px;
+    width: 115px;
     height: auto;
 }
 .category-products .card__media{
     position: relative;
-    padding-top: calc(150/120* 100%);
+    padding-top: calc(150/115* 100%);
 }
 
 .category-list .navigation-wrapper{
