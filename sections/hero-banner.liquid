@@ -15,9 +15,9 @@
        </div>
 
        <div class="banner-content">
-          <h2 class="banner-head">Spring Summer SS24 Sale</h2>
+          <h2 class="banner-head">{{ section.settings.banner_head }}</h2>
           <a href="#" class="collection-link">
-            Shop now
+            {{ section.settings.collection_link }}
           </a>
        </div>
     </div>
@@ -39,6 +39,18 @@
             "type": "image_picker",
             "id":"desktop_img",
             "label":"Select the desktop image"
+          },
+          {
+            "type":"text",
+            "id":"banner_head",
+            "label":"Enter the banner heading",
+            "default":"Spring Summer SS24 Sale"
+          },
+          {
+            "type":"text",
+            "id":"collection_link",
+            "label":"Enter the collection link text",
+            "default":"Shop now"
           }
         ],
         "presets": [
