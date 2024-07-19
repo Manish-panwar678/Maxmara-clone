@@ -1,6 +1,7 @@
 .hero-banner .banner-image img{
     width: 100%;
     max-width: 100%;
+    cursor: pointer;
 }
 
 .hero-banner .page-width{

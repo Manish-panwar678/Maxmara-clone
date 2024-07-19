@@ -315,7 +315,18 @@
       "type": "hero-banner",
       "settings": {
         "mobile_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg",
-        "desktop_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg"
+        "desktop_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg",
+        "banner_head": "Spring Summer SS24 Sale",
+        "collection_link": "Shop now"
+      }
+    },
+    "hero_banner_LTWxdU": {
+      "type": "hero-banner",
+      "settings": {
+        "mobile_img": "shopify:\/\/shop_images\/maxmara-banner-2.jpg",
+        "desktop_img": "shopify:\/\/shop_images\/maxmara-banner-2.jpg",
+        "banner_head": "Max Mara's Magic Circus",
+        "collection_link": "Discover more"
       }
     }
   },
@@ -328,6 +339,7 @@
     "multicolumn",
     "image_with_text_AT7KYX",
     "category_list_URCKXQ",
-    "hero_banner_RMNn4C"
+    "hero_banner_RMNn4C",
+    "hero_banner_LTWxdU"
   ]
 }
