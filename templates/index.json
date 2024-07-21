@@ -317,7 +317,20 @@
         "mobile_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg",
         "desktop_img": "shopify:\/\/shop_images\/Maxmara-banner.jpg",
         "banner_head": "Spring Summer SS24 Sale",
-        "collection_link": "Shop now"
+        "collection_link": "Shop now",
+        "hm_video_url": "",
+        "checked_itm_img": true,
+        "checked_itm_video": false
+      }
+    },
+    "hero_banner_NhyjYr": {
+      "type": "hero-banner",
+      "settings": {
+        "banner_head": "Venetia - Max Mara Resort 2025",
+        "collection_link": "Watch now the fashion film",
+        "hm_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bc217aa45c80473faa41f63cec7ba479.mp4",
+        "checked_itm_img": false,
+        "checked_itm_video": true
       }
     },
     "hero_banner_LTWxdU": {
@@ -326,7 +339,10 @@
         "mobile_img": "shopify:\/\/shop_images\/maxmara-banner-2.jpg",
         "desktop_img": "shopify:\/\/shop_images\/maxmara-banner-2.jpg",
         "banner_head": "Max Mara's Magic Circus",
-        "collection_link": "Discover more"
+        "collection_link": "Discover more",
+        "hm_video_url": "",
+        "checked_itm_img": true,
+        "checked_itm_video": false
       }
     }
   },
@@ -340,6 +356,7 @@
     "image_with_text_AT7KYX",
     "category_list_URCKXQ",
     "hero_banner_RMNn4C",
+    "hero_banner_NhyjYr",
     "hero_banner_LTWxdU"
   ]
 }

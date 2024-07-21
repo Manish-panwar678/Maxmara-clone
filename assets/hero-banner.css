@@ -1,4 +1,4 @@
-.hero-banner .banner-image img{
+.hero-banner .banner-image img , .hero-banner .banner-image video{
     width: 100%;
     max-width: 100%;
     cursor: pointer;

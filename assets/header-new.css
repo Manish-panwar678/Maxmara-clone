@@ -83,7 +83,7 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #000;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 
 }
@@ -197,11 +197,13 @@ nav .nav-links-inner{
         display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 0 15px;
     }
 
     nav ul{
         display: flex;
         justify-content: space-between;
+        max-width: 865px;
     }
 
     nav ul li .arrow-right{
