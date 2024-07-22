@@ -1,4 +1,4 @@
-p{
+p,ul{
     margin: 0;
 }
 .icon-with-text{
@@ -63,6 +63,14 @@ accordion-items details:focus-visible , accordion-items details summary:focus-vi
     box-shadow: unset;
 }
 
+accordion-items .accordion-content{
+    display: none;
+}
+
+accordion-items .accordion-content.show{
+    display: block;
+}
+
 accordion-items .accordion-content ul{
    padding:  0;
    margin: 0;
@@ -77,3 +85,49 @@ accordion-items .accordion-content ul li a{
     font-size: 13px;
     color: #000;
 }
+
+.social-media{
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media-icons{
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+}
+.social-media-icons ul{
+    list-style: none;
+    max-width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px 29px;
+}
+
+.country-language-selector{
+    padding: 22px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.country-language-selector H4{
+    color: #000;
+    font-weight: 600;
+}
+.copyright-text{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 32px;
+    text-align: center;
+}
+
+.copyright-text p{
+    font-size: 12px;
+}
+

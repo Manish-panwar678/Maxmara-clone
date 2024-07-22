@@ -344,6 +344,11 @@
         "checked_itm_img": true,
         "checked_itm_video": false
       }
+    },
+    "newsletter_new_YRR3Qy": {
+      "type": "newsletter-new",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -357,6 +362,7 @@
     "category_list_URCKXQ",
     "hero_banner_RMNn4C",
     "hero_banner_NhyjYr",
-    "hero_banner_LTWxdU"
+    "hero_banner_LTWxdU",
+    "newsletter_new_YRR3Qy"
   ]
 }
