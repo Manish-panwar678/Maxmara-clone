@@ -33,7 +33,7 @@
 
                 </summary>
 
-                <div class="accordion-content">
+                <div class="accordion-content" data-index="{{ forloop.index0 }}">
                    <ul>
                     {% for link in linklists[block.settings.menu].links %}
                      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -46,16 +46,100 @@
          </div>
      <!-- detail summary block ends-->
 
+
+     <!-- social media icons starts-->
+       <div class="social-media">
+          <div class="social-media-icons">
+            <ul>
+         
+            <li>
+              <a>
+                {% render 'instagram-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'facebook-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'twitter-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'youtube-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'tiktok-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'pin-interest' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'tumble' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'talk-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'linkidin-icon' %}
+              </a>
+            </li>
+         
+            </ul>
+          </div>
+          <!-- Country and language selector starts -->
+            <div class="country-language-selector">
+              <h4>CHANGE COUNTRY OR LANGUAGE</h4>
+            </div>
+          <!-- Country and language selector ends -->
+          </div>
+     <!-- social media icons ends -->
+
+     <!-- copyright text-->
+
+     <div class="copyright-text">
+      <p>© 2024 Max Mara S.r.l. P. IVA Nr. 01397620350 - CHALMAX ME TRADING L.L.C VAT104044943900003</p>
+     </div>
+
+     
+
 </footer>
 
 <script>
   const accordionSummary = document.querySelectorAll('accordion-items summary');
-  
+  const accordionContent = document.querySelectorAll('.accordion-items .accordion-content');
+
   accordionSummary.forEach((summaryItem) => {
     summaryItem.addEventListener('click' , (e)=>{
-        console.log(e.target , "target element");
+        let targetAccordion = e.target.closest('details').querySelector('.accordion-content');
+        // accordionContent.forEach((accItem)=>{
+        //   accItem.classList.remove('show');
+        // })
+        console.log(targetAccordion.getAttribute('data-index'));
+        targetAccordion.classList.toggle('show');
     })
-  })
+  }) 
 </script>
 
 {% schema %}
