@@ -1,0 +1,179 @@
+
+{{ 'footer-new.css' |  asset_url |  stylesheet_tag }}
+<footer class="footer-new">
+ 
+    <!-- icon text section -->
+     <div class="icon-with-text">
+        <a href="#" class="store-locator-link">
+          <span>
+            {%  render 'store-locator' %} 
+          </span>
+          <p>{{ section.settings.store_locator_text }}</p>
+        </a>
+
+        <a href="#" class="customer-care-link">
+          <span>
+            {%  render 'phone-icon' %} 
+          </span>
+          <p>{{ section.settings.customer_care_text }}</p>
+        </a>
+     </div>
+
+     <!-- detail summary blocks starts-->
+         <div class="accordion-item-wrap">
+            {% for block in section.blocks %}
+            <accordion-items>
+               <details>
+                <summary>
+                    <h4>{{ block.settings.summary_head |  upcase }}</h4>
+                    <span class="arrow-icon">
+                        {% render 'arrow-icon' %}
+                    </span>
+
+
+                </summary>
+
+                <div class="accordion-content" data-index="{{ forloop.index0 }}">
+                   <ul>
+                    {% for link in linklists[block.settings.menu].links %}
+                     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                   </ul>
+                </div>
+               </details>
+               </accordion-items>
+            {% endfor %}
+         </div>
+     <!-- detail summary block ends-->
+
+
+     <!-- social media icons starts-->
+       <div class="social-media">
+          <div class="social-media-icons">
+            <ul>
+         
+            <li>
+              <a>
+                {% render 'instagram-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'facebook-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'twitter-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'youtube-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'tiktok-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'pin-interest' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'tumble' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'talk-icon' %}
+              </a>
+            </li>
+
+            <li>
+              <a>
+                {% render 'linkidin-icon' %}
+              </a>
+            </li>
+         
+            </ul>
+          </div>
+          <!-- Country and language selector starts -->
+            <div class="country-language-selector">
+              <h4>CHANGE COUNTRY OR LANGUAGE</h4>
+            </div>
+          <!-- Country and language selector ends -->
+          </div>
+     <!-- social media icons ends -->
+
+     <!-- copyright text-->
+
+     <div class="copyright-text">
+      <p>© 2024 Max Mara S.r.l. P. IVA Nr. 01397620350 - CHALMAX ME TRADING L.L.C VAT104044943900003</p>
+     </div>
+
+     
+
+</footer>
+
+<script>
+  const accordionSummary = document.querySelectorAll('accordion-items summary');
+  const accordionContent = document.querySelectorAll('.accordion-items .accordion-content');
+
+  accordionSummary.forEach((summaryItem) => {
+    summaryItem.addEventListener('click' , (e)=>{
+        let targetAccordion = e.target.closest('details').querySelector('.accordion-content');
+        // accordionContent.forEach((accItem)=>{
+        //   accItem.classList.remove('show');
+        // })
+        console.log(targetAccordion.getAttribute('data-index'));
+        targetAccordion.classList.toggle('show');
+    })
+  }) 
+</script>
+
+{% schema %}
+{
+    "name": "Footer new",
+    "settings": [
+          {
+            "type": "text",
+            "id":"store_locator_text",
+            "label":"Enter the store locator text",
+            "default":"Find your nearest store"
+          },
+          {
+            "type": "text",
+            "id":"customer_care_text",
+            "label":"Enter the customer care text",
+            "default":"Customer Care 800MAXMARA"
+          }
+        ],
+        "blocks":[{
+            "name":"Accordion items",
+            "type": "menu",
+            "settings": [
+                {
+                    "type": "link_list",
+                    "id":"menu",
+                    "label": "Choose the menu"
+                },
+                {
+                    "type": "text",
+                    "id":"summary_head",
+                    "label": "Enter the summary heading"
+                }
+            ]
+        }]
+}
+{% endschema %}

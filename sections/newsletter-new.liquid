@@ -1,0 +1,60 @@
+{{ 'newsletter-form.css' |  asset_url |  stylesheet_tag }}
+<newsletter-form-new>
+  <div class="newsletter-form-new">
+    <div class="newsletter-text-content">
+        <h2>MAX MARA NEWS</h2>
+        <P>Sign up to our newsletter and receive updates on events, collections and exclusive promotions.</P>
+    </div>
+
+    <div class="newsletter-email-input">
+      {% form 'customer', class: 'newsletter-form-container' %} 
+        <div class="email-field-input">
+            <input
+            id="NewsletterForm--{{ section.id }}"
+            type="email"
+            name="contact[email]"
+            class="email_field__input"
+            value="{{ form.email }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            {% if form.errors %}
+              autofocus
+              aria-invalid="true"
+              aria-describedby="Newsletter-error--{{ section.id }}"
+            {% elsif form.posted_successfully? %}
+              aria-describedby="Newsletter-success--{{ section.id }}"
+            {% endif %}
+            placeholder="Enter your email"
+            required
+          >
+          
+          <button
+                    type="submit"
+                    class="newsletter_new_submit_button"
+                    name="commit"
+                    id="Subscribe"
+                    aria-label="{{ 'newsletter.button_label' | t }}"
+                  >
+                    {% render 'icon-arrow' %}
+                  </button>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</newsletter-form-new>
+
+{% schema %}
+{
+    "name": "Newsletter",
+    "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name":"newsletter"
+            }
+        ]
+}
+{% endschema %}

@@ -83,7 +83,7 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #000;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 
 }
@@ -190,18 +190,20 @@ nav .nav-links-inner{
     position: relative;
     left: 0;
     height: 100%;
-    width: 70%;
+    width: 80%;
     }
 
     .content-wrap{
         display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 0 15px;
     }
 
     nav ul{
         display: flex;
         justify-content: space-between;
+        max-width: 865px;
     }
 
     nav ul li .arrow-right{
@@ -217,39 +219,5 @@ nav .nav-links-inner{
         text-align: center;
     }
 
-    /* .logo-icon-wrapper{
-        flex: 0 0 30%;
-        justify-content: flex-end;
-    } */
-
-    /* nav{
-        width: 70%;
-    height: 100%;
-    top: 0;
-    background: transparent;
-    left: auto;
-    }
-
-    nav ul{
-        margin: 0;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    left: 0;
-    justify-content: space-between;
-    }
-
-    nav ul li .arrow-right{
-        display: none;
-    }
-
-    .hamburger-btn{
-        display: none;
-    } */
-
-    /* .nav-links .page-width{
-        padding-top: 0;
-        padding-bottom: 0;
-        height: 100%;
-    } */
+    
 }

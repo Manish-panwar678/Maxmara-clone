@@ -3,6 +3,7 @@
   <div class="page-width">
     <div class="banner-container">
        <div class="banner-image">
+        {% if section.settings.checked_itm_img %}
         <a>
             <picture class="banner-image__picture">
                 <source  media="(min-width:768px)" srcset="{{ section.settings.desktop_img |  img_url: 'original' }}">
@@ -12,12 +13,19 @@
                 <img loading="lazy" src="{{ section.settings.mobile_img |  img_url: 'original' }}" alt="hero-banner-image" class="">
             </picture>
         </a>
+        {% endif %}
+
+      {% if section.settings.checked_itm_video %}
+         <video poster="" autoplay loop muted>
+           <source src="{{ section.settings.hm_video_url }}" type="video/mp4">
+         </video>
+      {% endif %}
        </div>
 
        <div class="banner-content">
-          <h2 class="banner-head">Spring Summer SS24 Sale</h2>
+          <h2 class="banner-head">{{ section.settings.banner_head }}</h2>
           <a href="#" class="collection-link">
-            Shop now
+            {{ section.settings.collection_link }}
           </a>
        </div>
     </div>
@@ -39,7 +47,36 @@
             "type": "image_picker",
             "id":"desktop_img",
             "label":"Select the desktop image"
+          },
+          {
+            "type":"text",
+            "id":"banner_head",
+            "label":"Enter the banner heading",
+            "default":"Spring Summer SS24 Sale"
+          },
+          {
+            "type":"text",
+            "id":"collection_link",
+            "label":"Enter the collection link text",
+            "default":"Shop now"
+          },
+          {
+            "type":"url",
+            "id":"hm_video_url",
+            "label":"Select the video url"
+          },
+          {
+            "type":"checkbox",
+            "id":"checked_itm_img",
+            "label":"Check item for image"
+          },
+
+          {
+            "type":"checkbox",
+            "id":"checked_itm_video",
+            "label":"Check item for video"
           }
+
         ],
         "presets": [
             {
