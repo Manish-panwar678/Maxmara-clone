@@ -147,6 +147,49 @@
         "settings": {
           "logo_img": "shopify:\/\/shop_images\/MM_logo_e120fbdf-e886-4b7f-964a-5e5ccb0f7672.svg"
         }
+      },
+      "footer-new": {
+        "type": "footer-new",
+        "blocks": {
+          "menu_Xz3fL8": {
+            "type": "menu",
+            "settings": {
+              "menu": "customer-care",
+              "summary_head": "customer care"
+            }
+          },
+          "menu_dQTE7z": {
+            "type": "menu",
+            "settings": {
+              "menu": "your-account",
+              "summary_head": "your account"
+            }
+          },
+          "menu_BttbDd": {
+            "type": "menu",
+            "settings": {
+              "menu": "corporate",
+              "summary_head": "corporate"
+            }
+          },
+          "menu_cXcJMA": {
+            "type": "menu",
+            "settings": {
+              "menu": "legal-area",
+              "summary_head": "legal area"
+            }
+          }
+        },
+        "block_order": [
+          "menu_Xz3fL8",
+          "menu_dQTE7z",
+          "menu_BttbDd",
+          "menu_cXcJMA"
+        ],
+        "settings": {
+          "store_locator_text": "Find your nearest store",
+          "customer_care_text": "Customer Care 800MAXMARA"
+        }
       }
     },
     "content_for_index": [
