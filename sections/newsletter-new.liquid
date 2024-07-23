@@ -1,5 +1,6 @@
 {{ 'newsletter-form.css' |  asset_url |  stylesheet_tag }}
 <newsletter-form-new>
+  <div class="page-width">
   <div class="newsletter-form-new">
     <div class="newsletter-text-content">
         <h2>MAX MARA NEWS</h2>
@@ -40,8 +41,16 @@
                     {% render 'icon-arrow' %}
                   </button>
         </div>
+
+      <div class="consent-checkbox-text">
+        <input type="checkbox" name="privacyCheckbox" id="checkbox">
+        <span class="consent-text-link">I have read the <a href="#">privacy policy</a></span>
+      </div>
       {% endform %}
     </div>
+
+    
+  </div>
   </div>
 </newsletter-form-new>
 
