@@ -1,7 +1,15 @@
 
+newsletter-form-new {
+    background-color: rgba(240, 240, 240, 1);
+    display: block;
+}
+
+newsletter-form-new .page-width{
+    padding: 0;
+}
 .newsletter-form-new{
     padding: 30px 0;
-    background-color: rgba(240, 240, 240, 1);
+   
     display: flex;
     flex-direction: column;
 }
@@ -38,4 +46,63 @@
     background: none;
     border: none;
     opacity: 60%;
+}
+
+.newsletter-text-content p{
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(31, 41, 55, 1);
+    font-family: sans-serif;
+}
+
+.email-field-input{
+    margin-bottom: 5px;
+}
+.consent-checkbox-text input[type="checkbox"]{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 0;
+}
+
+.consent-checkbox-text{
+    display: flex;
+    align-items: center;
+}
+
+.consent-checkbox-text span.consent-text-link{
+    font-size: 10px;
+    color: #000;
+    font-weight: 400;
+}
+
+.consent-checkbox-text span.consent-text-link a{
+    color: #000;
+    text-decoration: underline;
+
+}
+
+@media screen and (min-width:768px){
+    .newsletter-form-new {
+        padding-left: 80px;
+        padding-right: 80px;
+        
+    }
+
+    
+}
+
+@media screen and (min-width:1024px){
+    .newsletter-form-new{
+        flex-direction: row;
+        align-items: center;
+        gap: 200px;
+    }
+
+    .newsletter-text-content, .newsletter-email-input{
+        flex:1;
+    }
 }
