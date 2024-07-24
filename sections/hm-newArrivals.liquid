@@ -1,0 +1,93 @@
+{{ 'hm-newArrivals.css' |  asset_url |  stylesheet_tag }}
+
+<div class="hm-new-arrival">
+    <div class="page-width">
+        <div class="card__wrapper">
+            
+            <div class="card__image" style="padding-bottom: {{ 1 | divided_by:1.5 |  times: 100 }}%;">
+                <a>
+                <picture class="card-image__picture">
+                    <source  media="(min-width:768px)" srcset="{{ section.settings.card_img |  img_url: 'original' }}">
+
+                    <source  media="(max-width:767px)" srcset="{{ section.settings.card_img |  img_url: 'original' }}">
+
+                    <img loading="lazy" src="{{ section.settings.card_img |  img_url: 'original' }}" alt="hero-banner-image" class="">
+                </picture>
+                </a>
+            </div>
+
+            <div class="new-arrival-text-desktop">
+                <h3>New In</h3>
+
+                <div class="accordion-content-desktop">
+                    <a href="#">
+                        <p>
+                           A new selection from Max Mara is ready for you 
+                        </p>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="collection-title">
+                <h3>New In</h3>
+                <div class="accordion-item">
+                    <details id="myDetails">
+                        <summary>
+                            <button class="accordion-btn" data-role="expand-widget">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="plus-icon" width="20" height="20" viewBox="0 0 12 13" fill="none">
+                                <path d="M10.8291 6.23793H6.26169L6.26243 1.67124L5.73794 1.67087V6.2383L1.17089 6.23793L1.17126 6.76241L5.73757 6.76204L5.73794 11.3291H6.26206L6.26206 6.76241L10.8291 6.76204V6.23793Z" fill="black"></path>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="minus-icon" width="20" height="20" viewBox="0 0 12 13" fill="none">
+                                <path d="M10.8291 6.23793H6.26169L6.26243 6.23793L5.73794 6.23755L5.73794 6.2383L1.17089 6.23793L1.17126 6.76241L5.73757 6.76204L6.26206 6.76241L10.8291 6.76204V6.23793Z" fill="black"></path>
+                                </svg>
+
+                            </button>
+                        </summary>
+                        <div class="accordion-content">
+                            <a href="#">
+                                <p>
+                                    A new selection from Max Mara is ready for you 
+                                </p>
+                            </a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</div>
+
+<script>
+    const accordionBtn = document.querySelector('.accordion-btn');
+
+    accordionBtn.addEventListener('click' , (e)=>{
+        const detailsElement = document.getElementById('myDetails');
+    if (detailsElement.hasAttribute('open')) {
+        detailsElement.removeAttribute('open');
+    } else {
+        detailsElement.setAttribute('open', '');
+    }
+    })
+</script>
+
+{% schema %}
+{
+    "name": "New Arrivals",
+    "settings": [
+        
+           {
+            "type": "image_picker",
+            "id":"card_img",
+            "label": "Select the card image"
+           }
+        ],
+        "presets": [
+            {
+                "name": "New Arrivals"
+            }
+        ]
+}
+{% endschema %}

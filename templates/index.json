@@ -336,6 +336,12 @@
         "checked_itm_video": false
       }
     },
+    "hm_new_arrivals_HHTmGP": {
+      "type": "hm-newArrivals",
+      "settings": {
+        "card_img": "shopify:\/\/shop_images\/maxmara-new-arrival.jpg"
+      }
+    },
     "newsletter_new_YRR3Qy": {
       "type": "newsletter-new",
       "settings": {
@@ -354,6 +360,7 @@
     "hero_banner_RMNn4C",
     "hero_banner_NhyjYr",
     "hero_banner_LTWxdU",
+    "hm_new_arrivals_HHTmGP",
     "newsletter_new_YRR3Qy"
   ]
 }

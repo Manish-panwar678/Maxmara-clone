@@ -1,6 +1,15 @@
 p,ul{
     margin: 0;
 }
+
+.footer-new{
+    display: block;
+
+}
+
+.footer-new .page-width{
+    padding: 0;
+}
 .icon-with-text{
     background-color: rgba(240, 240, 240, 1);
 }
@@ -116,9 +125,10 @@ accordion-items .accordion-content ul li a{
     justify-content: center;
 }
 
-.country-language-selector H4{
+.country-language-selector h4{
     color: #000;
     font-weight: 600;
+    text-align: center;
 }
 .copyright-text{
     background-color: #000;
@@ -130,4 +140,78 @@ accordion-items .accordion-content ul li a{
 .copyright-text p{
     font-size: 12px;
 }
+
+.footer-links-items{
+   display: none;      
+} 
+
+@media screen and (min-width:768px){
+    .icon-with-text{
+        display: none;
+    }
+
+    accordion-items details{
+        padding: 0 100px;
+    }
+
+    .social-media-icons ul{
+        max-width: 70%;
+        gap: 9px 36px;
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+    .accordion-item-wrap{
+        display: none;
+    }
+
+    .footer-links-items{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);   
+    }
+
+    .accordion-item-wrap-outer{
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+
+    .footer-links-items .page-width{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-new-inner{
+        padding: 40px 100px;
+    }
+
+    .social-media, .social-media-icons{
+        border-bottom: unset;
+    }
+
+    .link-items ul{
+        padding: 0;
+        list-style: none;
+    }
+
+    .link-items ul li a{
+        text-decoration: none;
+        color: #000;
+        font-size: 13px;
+    }
+
+    .link-items h4{
+        margin-bottom: 20px;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .social-media-icons ul{
+        max-width: none;
+    }
+
+}
+
+
+
 
