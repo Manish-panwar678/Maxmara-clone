@@ -1,0 +1,66 @@
+{{ 'hm-newArrivals.css' |  asset_url |  stylesheet_tag }}
+
+<div class="hm-new-arrival">
+    <div class="page-width">
+        <div class="card__wrapper">
+            <div class="card__image">
+                <a>
+                <picture class="card-image__picture">
+                    <source  media="(min-width:768px)" srcset="{{ section.settings.card_img |  img_url: 'original' }}">
+
+                    <source  media="(max-width:767px)" srcset="{{ section.settings.card_img |  img_url: 'original' }}">
+
+                    <img loading="lazy" src="{{ section.settings.card_img |  img_url: 'original' }}" alt="hero-banner-image" class="">
+                </picture>
+                </a>
+            </div>
+
+            <div class="collection-title">
+                <h3>New In</h3>
+                <accordion-item>
+                    <details>
+                        <summary>
+                            <button class="absolute top-0 left-[50%] h-[32px] w-[32px] translate-x-[-50%] translate-y-[-50%] shadow-[0_0_10px_rgb(0_0_0_/_14%)] p-[6px] bg-[#fff] rounded-full md:hidden cursor-pointer" data-role="expand-widget">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-open:hidden" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                <path d="M10.8291 6.23793H6.26169L6.26243 1.67124L5.73794 1.67087V6.2383L1.17089 6.23793L1.17126 6.76241L5.73757 6.76204L5.73794 11.3291H6.26206L6.26206 6.76241L10.8291 6.76204V6.23793Z" fill="black"></path>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden group-open:block" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                <path d="M10.8291 6.23793H6.26169L6.26243 6.23793L5.73794 6.23755L5.73794 6.2383L1.17089 6.23793L1.17126 6.76241L5.73757 6.76204L6.26206 6.76241L10.8291 6.76204V6.23793Z" fill="black"></path>
+                                </svg>
+
+                            </button>
+                        </summary>
+                        <div class="accordion-content">
+                            <a href="#">
+                                <p>
+                                    A new selection from Max Mara is ready for you 
+                                </p>
+                            </a>
+                        </div>
+                    </details>
+                </accordion-item>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "New Arrivals",
+    "settings": [
+        
+           {
+            "type": "image_picker",
+            "id":"card_img",
+            "label": "Select the card image"
+           }
+        ],
+        "presets": [
+            {
+                "name": "New Arrivals"
+            }
+        ]
+}
+{% endschema %}
