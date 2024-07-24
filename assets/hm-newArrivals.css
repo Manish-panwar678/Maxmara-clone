@@ -6,7 +6,7 @@ h3{
     margin: 0;
 }
 
-/* .hm-new-arrival .card__wrapper{
+/* .hm-new-arrival .card__wrapper{deta
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 #0000, 0 0 #0000, 0 5px 5px 0px rgba(0, 0, 0, .08);
@@ -128,18 +128,18 @@ details[open]#myDetails button .plus-icon{
     text-decoration: none;
 }
 
-details
+.accordion-item details
 {
     transition: height .5s ease;
     overflow: hidden;
 }
 
-details:not([open])
+.accordion-item details:not([open])
 {
     height: 0px;
 }
 
-details[open]
+.accordion-item details[open]
 {
     height: 60px;
 }
