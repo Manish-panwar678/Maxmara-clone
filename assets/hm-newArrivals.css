@@ -1,3 +1,191 @@
 img{
     max-width: 100%;
 }
+
+h3{
+    margin: 0;
+}
+
+/* .hm-new-arrival .card__wrapper{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 5px 5px 0px rgba(0, 0, 0, .08);
+    position: relative;
+}
+
+.hm-new-arrival .card__image{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hm-new-arrival .collection-title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+} */
+
+.hm-new-arrival .card__wrapper{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 5px 5px 0px rgba(0, 0, 0, .08);
+}
+
+.accordion-item button{
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 9999px;
+    padding: 6px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 5px 5px 0px rgba(0, 0, 0, .08);
+    width: 32px;
+    height: 32px;
+}
+
+.accordion-item button:focus-visible{
+    outline: unset;
+    box-shadow: unset;
+    border: unset;
+}
+
+.accordion-item summary{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.accordion-item summary:focus-visible{
+    outline: unset;
+    outline-offset: unset;
+    border: none;
+    box-shadow: unset;
+}
+
+.accordion-item button svg.minus-icon{
+    display: none;
+}
+.collection-title{
+    padding: 34px 20px 24px 20px;
+    position: relative;
+}
+
+.collection-title h3{
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.hm-new-arrival .page-width{
+    padding: 40px 20px;
+}
+
+.card__wrapper .card__image{
+    height: 230px;
+    width: 100%;
+    position: relative;
+}
+
+.card__wrapper .card__image img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* details#myDetails{
+    height: 0;
+    transition: height .5s ease;
+}
+
+
+
+details[open]#myDetails{
+   height: 100%;
+}  */
+
+details[open]#myDetails button .minus-icon{
+    display: block;
+}
+
+details[open]#myDetails button .plus-icon{
+    display: none;
+}
+.accordion-content p{
+    color: rgba(89, 89, 89, 1);
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.accordion-content a{
+    text-decoration: none;
+}
+
+details
+{
+    transition: height .5s ease;
+    overflow: hidden;
+}
+
+details:not([open])
+{
+    height: 0px;
+}
+
+details[open]
+{
+    height: 60px;
+}
+
+.new-arrival-text-desktop{
+    display: none;
+}
+
+@media screen and (min-width:768px){
+    .new-arrival-text-desktop{
+        display: block;
+    }
+
+    .collection-title{
+        display: none;
+    }
+
+    .hm-new-arrival .card__wrapper{
+        box-shadow: unset;
+        flex-direction: row;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .card__wrapper .card__image{
+        flex: 1;
+    }
+
+    .new-arrival-text-desktop{
+        flex:1;
+    }
+
+    .accordion-content-desktop a{
+        text-decoration: none;
+        color: rgba(89,89,89,1);
+
+    }
+
+    .accordion-content-desktop p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .hm-new-arrival .page-width{
+        padding: 40px 65px;
+    }
+}
