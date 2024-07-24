@@ -202,12 +202,13 @@ accordion-items .accordion-content ul li a{
 
     .link-items h4{
         margin-bottom: 20px;
+        color: #000;
+        font-weight: 600;
     }
 
     .social-media-icons ul{
         max-width: none;
     }
-
 
 }
 
