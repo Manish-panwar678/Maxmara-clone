@@ -161,7 +161,7 @@ details[open]#myDetails button .plus-icon{
         box-shadow: unset;
         flex-direction: row;
         align-items: center;
-        gap: 80px;
+        gap: 85px;
     }
 
     .card__wrapper .card__image{
@@ -181,11 +181,73 @@ details[open]#myDetails button .plus-icon{
     .accordion-content-desktop p {
         font-size: 17px;
         line-height: 25px;
+        padding-right: 62px;
     }
+
+    .new-arrival-text-desktop a.collection-link{
+        color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    /* margin-top: 24px; */
+    display: inline-flex;
+    align-items: center;
+    padding-right: 10px;
+    position: relative;
+    margin-right: 62px;
+    padding: 5px 0;
+    padding-right: 40px;
+    }
+
+    .new-arrival-text-desktop h3{
+        margin-bottom: 9px;
+        font-weight: 600;
+    }
+
+    .new-arrival-text-desktop a.collection-link::before{
+        content: '';
+        margin-right: 9px;
+        padding-top: 2px;
+        background-color: #000;
+        width: 31px;
+        display: inline-flex;
+        transition: all .5s ease;
+    }
+
+    .new-arrival-text-desktop a.collection-link::after{
+        content: '';
+        background: url('data:image/svg+xml,<svg width="31" height="14" viewBox="0 0 21 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.71439C20.5488 4.51913 20.5488 4.20255 20.3536 4.00729L17.1716 0.825306C16.9763 0.630044 16.6597 0.630044 16.4645 0.825306C16.2692 1.02057 16.2692 1.33715 16.4645 1.53241L19.2929 4.36084L16.4645 7.18927C16.2692 7.38453 16.2692 7.70111 16.4645 7.89637C16.6597 8.09164 16.9763 8.09164 17.1716 7.89637L20.3536 4.71439ZM0 4.86084H20V3.86084H0V4.86084Z" fill="black"/></svg>');
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(100% , -50%);
+        margin-top: 1px;
+        height: 14px;
+        width: 31px;
+        display: inline-flex;
+        visibility: hidden;
+    }
+
+    .hm-new-arrival:hover a.collection-link::after{
+        visibility: visible;
+      }
+
+      .hm-new-arrival:hover a.collection-link{
+        padding-right: 10px;
+      }
+      
+      .hm-new-arrival:hover a.collection-link::before{
+          width: 0px;
+          margin-right: 0;
+      }
 }
 
 @media screen and (min-width:1024px){
     .hm-new-arrival .page-width{
         padding: 40px 65px;
+    }
+
+    .hm-new-arrival .card__wrapper{
+        gap: 115px;
     }
 }
