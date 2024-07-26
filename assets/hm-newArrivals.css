@@ -1,31 +1,15 @@
 img{
     max-width: 100%;
+    cursor: pointer;
 }
 
 h3{
     margin: 0;
 }
 
-/* .hm-new-arrival .card__wrapper{deta
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 5px 5px 0px rgba(0, 0, 0, .08);
-    position: relative;
+.hm-new-arrival{
+    cursor: pointer;
 }
-
-.hm-new-arrival .card__image{
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hm-new-arrival .collection-title{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #fff;
-    padding: 20px;
-} */
 
 .hm-new-arrival .card__wrapper{
     display: flex;
@@ -54,7 +38,6 @@ h3{
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
     background: #fff;
     border-radius: 50%;
 }
@@ -148,6 +131,8 @@ details[open]#myDetails button .plus-icon{
     display: none;
 }
 
+
+
 @media screen and (min-width:768px){
     .new-arrival-text-desktop{
         display: block;
@@ -228,15 +213,15 @@ details[open]#myDetails button .plus-icon{
         visibility: hidden;
     }
 
-    .hm-new-arrival:hover a.collection-link::after{
+    .hm-new-arrival .card__wrapper:hover a.collection-link::after{
         visibility: visible;
       }
 
-      .hm-new-arrival:hover a.collection-link{
+      .hm-new-arrival .card__wrapper:hover a.collection-link{
         padding-right: 10px;
       }
       
-      .hm-new-arrival:hover a.collection-link::before{
+      .hm-new-arrival .card__wrapper:hover a.collection-link::before{
           width: 0px;
           margin-right: 0;
       }
