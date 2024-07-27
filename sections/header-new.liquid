@@ -70,15 +70,88 @@
         <nav class="nav-links">
 
             <div class="nav-links-inner">
-            <ul>
+            <ul class="parent">
             {% for link in linklists.main-menu.links %} 
-            <li>
+            <li class="parent-list">
                 <a href="{{ link.url }}">
                 {{ link.title |  upcase }}
                 </a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="arrow-right">
                     <path d="M5.6383 14L5 13.2868L9.7234 8.0005L5 2.71524L5.6383 2L11 8.0005L5.6383 14Z" fill="black"></path>
                 </svg>
+
+                <!-- child links nav-->
+              <div class="child-links">
+                    <div class="child-head">
+                        <button class="nested-toggle" data-role="nested-toggle" style="
+                        background: none;
+                        border: none;
+                        transform: rotate(180deg);
+                        ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M5.6383 14L5 13.2868L9.7234 8.0005L5 2.71524L5.6383 2L11 8.0005L5.6383 14Z" fill="black"></path>
+                        </svg>
+                        </button>
+                        <h3><a href="#" class="child-drawer-link">{{ link.title |  upcase }}</a></h3>
+                        <button data-role="nav-toggle" style="
+                        background: none;
+                        border: none;
+                        "><svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+                        <path d="M13.6416 0L7.46824 5.38276L1.29689 0L0.587494 0.617674L6.76085 6.00044L0.587494 11.3823L1.29689 12L7.46824 6.61811L13.6416 12L14.35 11.3823L8.17764 6.00044L14.35 0.617674L13.6416 0Z" fill="black"></path>
+                        </svg>
+                        </button>
+                    </div>
+                 <div class="child-drawer-wrapper">
+                    <ul class="child">
+                        {% for child_link in link.links %} 
+                            <li class="child-item">
+                               <a href="#" class="child-item-links"> {{ child_link.title |  upcase }}</a>
+
+                                {% if child_link.links != blank %}
+                                    <ul class="grandchild">
+                                    {% for grandchild_link in child_link.links %}  
+                                      <li><a href= "{{ grandchild_link.url }}" class="grand-child-links">{{ grandchild_link.title | upcase}}</a></li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}   
+
+                               
+                            </li>
+                        {% endfor %}
+                    </ul>
+                     <!-- child drawer header images -->
+                    {% for block in section.blocks %}
+                      
+                        {% assign parent_link_handle = link.title |  handleize %}
+                        {% if block.settings.nav_handle == parent_link_handle %} 
+                            <div class="child-header-image-with-text">
+                             
+                               <a>
+                                <picture class="banner-image__picture">
+                                    <source  media="(min-width:768px)" srcset="{{ block.settings.collection_img1 |  img_url: 'original' }}">
+
+                                    <source  media="(max-width:767px)" srcset="{{ block.settings.collection_img1 |  img_url: 'original' }}">
+
+                                    <img loading="lazy" src="{{ block.settings.collection_img1 |  img_url: 'original' }}" alt="hero-banner-image" class="">
+                                </picture>
+                               </a>
+                               
+                               <a>
+                                <picture class="banner-image__picture">
+                                    <source  media="(min-width:768px)" srcset="{{ block.settings.collection_img2 |  img_url: 'original' }}">
+
+                                    <source  media="(max-width:767px)" srcset="{{ block.settings.collection_img2 |  img_url: 'original' }}">
+
+                                    <img loading="lazy" src="{{ block.settings.collection_img2 |  img_url: 'original' }}" alt="hero-banner-image" class="">
+                                </picture>
+                               </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                     
+                 </div>
+                   
+                </div>
             </li>
             {% endfor %}
             </ul>
@@ -144,11 +217,47 @@
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     const navLinks = document.querySelector('nav.nav-links');
     const header = document.querySelector('.header-new');
+    const parentNavLinks = document.querySelectorAll('ul.parent li');
+    const childLinksContainer = document.querySelectorAll('.child-links');
+    const nestedToggleBtns = document.querySelectorAll('button.nested-toggle');
 
     hamburgerBtn.addEventListener('click' , ()=>{
         navLinks.classList.toggle('show');
         header.classList.toggle('header-top');
     })
+
+    parentNavLinks.forEach((linkItems)=>{
+        linkItems.addEventListener('click' , (e)=>{
+            console.log('clicked event occurs......');
+            navLinks.classList.add('child-drawer');
+            console.log(e.target.closest('li.parent-list'));
+          let childLinks = e.target.closest('li.parent-list').querySelector('.child-links');
+          let hideDrawer = e.target.closest('.nav-links-inner').querySelector('.drawer-icons');
+          console.log(hideDrawer , "hideDrawer");
+
+         if(!childLinks.classList.contains('active')){
+            childLinksContainer.forEach((c)=>{
+               c.classList.remove('active');
+            })
+            childLinks.classList.add('active');
+            hideDrawer.style.display = "none";
+         }
+
+         else{
+            hideDrawer.style.display = "block";
+         }
+
+          
+        })
+    })
+
+    // nestedToggleBtns.forEach((toggleBtn)=>{
+    //     toggleBtn.addEventListener('click' , (e)=>{
+    //         let clikedBtn = e.target.querySelector('')
+    //     })
+    // })
+
+
 </script>
 {%  schema  %} 
 {
@@ -159,7 +268,45 @@
             "id":"logo_img",
             "label": "Select the logo image"
         }
-    ]
+    ],
+    "blocks":[{
+        "name":"Parent nav",
+        "type": "image",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id":"collection_img1",
+                "label":"Select the image 1"
+            },
+
+            {
+                "type":"image_picker",
+                "id":"collection_img2",
+                "label":"Select the image 2"
+            },
+            {
+                "type":"text",
+                "id":"nav_handle",
+                "label": "Enter the parent nav handle"
+            },
+            {
+                "type":"text",
+                "id":"collection_img_title1",
+                "label":"Enter the title 1"
+            },
+            {
+                "type":"text",
+                "id":"collection_img_title2",
+                "label":"Enter the title 2"
+            },
+            {
+                "type": "number",
+                "id":"image_number",
+                "label":"Enter the number of images"
+            }
+
+        ]
+    }]
 }
  
 {% endschema %}

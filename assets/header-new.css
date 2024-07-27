@@ -63,24 +63,25 @@ nav.show{
     
 }
 
-.header-new.header-top .icons .search-icon , .header-new.header-top .icons .cart-icon ,.header-new.header-top .icons .wishlist-icon{
-    display: none;
+ .header-new.header-top .icons .cart-icon ,.header-new.header-top .icons .wishlist-icon{
+    visibility: hidden;
 }
 
-nav ul{
+
+ ul.parent{
     list-style: none;
     padding: 0 20px;
     height: calc(100% - 67px);
 }
 
-nav ul li{
+ ul.parent  li.parent-list{
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
 
-nav ul li a{
+ul.parent li.parent-list a{
     text-decoration: none;
     color: #000;
     font-size: 14px;
@@ -141,6 +142,64 @@ nav .nav-links-inner{
     display: none;
 }
 
+.child-links{
+    display: none;
+}
+
+.child-links.active h3 a.child-drawer-link{
+    text-decoration: underline;
+}
+
+.nav-links.child-drawer .child-links.active{
+    display: block;
+    position: absolute;
+    top: -57px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    overflow: auto;
+}
+
+.child-links .child-head{
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+
+.child-links.active ul.child{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.child-links.active ul.child li.child-item{
+    border-bottom: 1px solid rgba(216, 216, 216, 1);
+    padding-bottom: 20px;
+}
+
+.child-links.active ul.child li.child-item a.child-item-links{
+    display: none;
+}
+
+ul.grandchild{
+    padding: 0;
+    list-style: none;
+}
+
+ul.grandchild li{
+    padding: 12px 20px;
+}
+
+.child-item .grandchild li a.grand-child-links{
+    font-weight: 400;
+    color: #000;
+    font-size: 13px;
+}
+
+
+
 @media screen and (min-width:768px){
     .logo-icon-wrapper{
         order: 2;
@@ -168,7 +227,7 @@ nav .nav-links-inner{
     }
 
     .header-new.header-top .icons .search-icon , .header-new.header-top .icons .cart-icon ,.header-new.header-top .icons .wishlist-icon{
-        display: block;
+        visibility: visible;
     }
 
     .header-new.header-top{
@@ -200,13 +259,13 @@ nav .nav-links-inner{
     padding: 0 15px;
     }
 
-    nav ul{
+    ul.parent{
         display: flex;
         justify-content: space-between;
         max-width: 865px;
     }
 
-    nav ul li .arrow-right{
+    ul.parent li.parent-list .arrow-right{
         display: none;
     }
 

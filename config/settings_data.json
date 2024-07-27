@@ -135,6 +135,77 @@
       },
       "header-new": {
         "type": "header-new",
+        "blocks": {
+          "image_YzND8Q": {
+            "type": "image",
+            "settings": {
+              "nav_handle": "sale",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          },
+          "image_k7jDqG": {
+            "type": "image",
+            "settings": {
+              "collection_img1": "shopify:\/\/shop_images\/t-shirt1.jpg",
+              "collection_img2": "shopify:\/\/shop_images\/t-shirt2.jpg",
+              "nav_handle": "clothing",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          },
+          "image_rGjTPL": {
+            "type": "image",
+            "settings": {
+              "collection_img1": "shopify:\/\/shop_images\/Jacket_1_menu_bar.jpg",
+              "collection_img2": "shopify:\/\/shop_images\/trench_1.jpg",
+              "nav_handle": "coats-and-jackets",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          },
+          "image_BhTtkC": {
+            "type": "image",
+            "settings": {
+              "nav_handle": "bags-and-shoes",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          },
+          "image_rVJGzq": {
+            "type": "image",
+            "settings": {
+              "nav_handle": "accessories",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          },
+          "image_G7LmMx": {
+            "type": "image",
+            "settings": {
+              "nav_handle": "gifts",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          },
+          "image_FBUjNj": {
+            "type": "image",
+            "settings": {
+              "nav_handle": "runway",
+              "collection_img_title1": "",
+              "collection_img_title2": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_YzND8Q",
+          "image_k7jDqG",
+          "image_rGjTPL",
+          "image_BhTtkC",
+          "image_rVJGzq",
+          "image_G7LmMx",
+          "image_FBUjNj"
+        ],
         "settings": {
           "logo_img": "shopify:\/\/shop_images\/MM_logo_e120fbdf-e886-4b7f-964a-5e5ccb0f7672.svg"
         }
