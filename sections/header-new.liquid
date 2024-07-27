@@ -121,6 +121,7 @@
                     </ul>
                      <!-- child drawer header images -->
                     {% for block in section.blocks %}
+                      
                         {% assign parent_link_handle = link.title |  handleize %}
                         {% if block.settings.nav_handle == parent_link_handle %} 
                             <div class="child-header-image-with-text">
