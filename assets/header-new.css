@@ -74,7 +74,7 @@ nav.show{
     height: calc(100% - 67px);
 }
 
- ul.parent  li.parent-list{
+ ul.parent  li.parent-list .parent-list-container{
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -130,12 +130,13 @@ nav .nav-links-inner{
     height: 100%;
 }
 
-.drawer-icons{
+.nav-links-inner .drawer-icons{
     position: fixed;
     bottom: 0;
     width: 100%;
     border-top: 1px solid rgba(216, 216, 216, 1);
     background-color: #fff;
+    display: block;
 }
 
 .logo-container-dektop{
@@ -200,6 +201,34 @@ ul.grandchild li{
 
 
 
+
+.nav-links-inner.hide .drawer-icons{
+    display: none;
+}
+
+.child-header-image-with-text{
+    background: rgba(240, 240, 240, 1);
+    padding: 20px 44px;
+}
+
+.child-header-image-with-text .image-content {
+    display: flex;
+    align-items: center;
+    background: white;
+    position: relative;
+}
+
+.image-content img{
+    max-width: 150px;
+    display: block;
+}
+
+.image-content h4{
+    margin-left: 10px;
+}
+
+
+
 @media screen and (min-width:768px){
     .logo-icon-wrapper{
         order: 2;
@@ -233,6 +262,10 @@ ul.grandchild li{
     .header-new.header-top{
         top: 34px;
         
+    }
+
+    .nav-links-inner .drawer-icons{
+        display: none;
     }
 }
 

@@ -898,7 +898,7 @@ class SlideshowComponent extends SliderComponent {
     this.setSlidePosition(this.slideScrollPosition);
 
     this.applyAnimationToAnnouncementBar(event.currentTarget.name);
-  }
+}
 
   setSlidePosition(position) {
     if (this.setPositionTimeout) clearTimeout(this.setPositionTimeout);
