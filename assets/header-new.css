@@ -11,7 +11,7 @@
 
 .header-new .page-width{
     
-    padding: 14px 20px;
+    padding: 14px 65px;
 }
 
 .logo-icon-wrapper{
@@ -333,10 +333,6 @@ ul.grandchild li{
         display: none;
     }
 
-    /* .header-new-content{
-        justify-content: flex-end;
-    }  */
-
     nav{
     position: relative;
     left: 0;
@@ -370,5 +366,6 @@ ul.grandchild li{
         text-align: center;
     }
 
+   
     
 }

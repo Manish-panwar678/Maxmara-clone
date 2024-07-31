@@ -71,9 +71,9 @@ hero-banner.hero-banner:hover a.collection-link::before{
 
 }
 
-@media screen and (min-width:768px){
-    .hero-banner .banner-content h2{
-        font-size: 22px;
+@media screen and (min-width:1024px){
+    .hero-banner .page-width{
+        padding: 0 65px;
     }
     
 }
