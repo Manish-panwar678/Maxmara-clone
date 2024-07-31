@@ -217,19 +217,38 @@
     const parentNavLinks = document.querySelectorAll('ul.parent li.parent-list .parent-list-container');
     const childLinksContainer = document.querySelectorAll('.child-links');
     const nestedToggleBtns = document.querySelectorAll('.nested-toggle');
+    const navToggleBtn = document.querySelectorAll('button[data-role="nav-toggle"]');
+    console.log(navToggleBtn , "navToggleBtn");
 
     hamburgerBtn.addEventListener('click' , ()=>{
         navLinks.classList.toggle('show');
         header.classList.toggle('header-top');
     })
 
+
+
     parentNavLinks.forEach((linkItems)=>{
         linkItems.addEventListener('click' , (e)=>{
-            console.log('clicked event occurs......');
-            navLinks.classList.add('child-drawer');
+          console.log("this is clicked parent");
+
           let childLinks = e.target.closest('li.parent-list').querySelector('.child-links');
           let navLinksInner = e.target.closest('.nav-links-inner');
+
+          if(childLinks.classList.contains('active')){
+            childLinks.classList.remove('active');
+            return;
+          }
+            parentNavLinks.forEach((itm)=>{
+                itm.classList.remove('active-link');
+            })
+
+          linkItems.classList.add('active-link'); 
+
+          navLinks.classList.add('child-drawer');
+          
+
          if(!childLinks.classList.contains('active')){
+
             childLinksContainer.forEach((c)=>{
                c.classList.remove('active');
             })
@@ -239,6 +258,8 @@
          }
         })
     })
+
+
 
   document.addEventListener('click' , ()=>{
     nestedToggleBtns.forEach((toggleBtn)=>{
@@ -254,7 +275,21 @@
         })
     })
   })
+
+
+
+
+  navToggleBtn.forEach((toggleBtn)=>{
+    toggleBtn.addEventListener('click' , (e)=>{
+        e.target.closest('.child-links.active').classList.remove('active');
+        let navLinksInner = e.target.closest('.nav-links-inner');
+
+            navLinksInner.classList.remove('hide');
+    })
+  })
     
+
+
 
 
 </script>
