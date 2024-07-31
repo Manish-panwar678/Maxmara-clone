@@ -173,6 +173,7 @@ nav .nav-links-inner{
     padding: 0;
     display: flex;
     flex-direction: column;
+    list-style: none;
 }
 
 .child-links.active ul.child li.child-item{
@@ -219,7 +220,7 @@ ul.grandchild li{
 }
 
 .image-content img{
-    max-width: 150px;
+    max-width: 100px;
     display: block;
 }
 
@@ -227,7 +228,10 @@ ul.grandchild li{
     margin-left: 10px;
 }
 
-
+.child-header-image-with-text-outer{
+    display: flex;
+    flex-direction: column;
+}
 
 @media screen and (min-width:768px){
     .logo-icon-wrapper{
@@ -267,6 +271,61 @@ ul.grandchild li{
     .nav-links-inner .drawer-icons{
         display: none;
     }
+
+    .nav-links.child-drawer .child-links.active{
+        left: 100%;
+        top: 0;
+    }
+
+    .child-links .child-head{
+        display: none;
+    }
+
+    .child-links.active ul.child li.child-item a.child-item-links{
+        display: block;
+        padding-left: 20px;
+    }
+
+    .child-links.active ul.child li.child-item{
+        border: none;
+    }
+
+    .child-links.active ul.child {
+        flex-direction: row;
+    }
+
+    ul.grandchild li{
+        padding: 8px 20px;
+    }
+
+    ul.parent li.parent-list .parent-list-container.active-link{
+       background-color: rgba(240, 240, 240, 1);
+    } 
+
+    ul.parent{
+        padding: 0;
+    }
+
+    ul.parent li.parent-list .parent-list-container{
+        padding: 10px 20px;
+    }
+
+    .child-header-image-with-text{
+        padding: 0 12px 20px 12px;
+        margin-top: 20px;
+        background-color: white;
+    }
+
+    .child-header-image-with-text img{
+        max-width: none;
+        width: 100%;
+    }
+
+    .child-header-image-with-text .image-content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
 
 @media screen and (min-width:1024px){
