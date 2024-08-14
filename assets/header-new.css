@@ -1,5 +1,4 @@
 
-
 .header-new{
     position: relative;
     position: fixed;
@@ -11,7 +10,7 @@
 
 .header-new .page-width{
     
-    padding: 14px 65px;
+    padding: 14px 20px;
 }
 
 .logo-icon-wrapper{
@@ -365,7 +364,33 @@ ul.grandchild li{
         display: block;
         text-align: center;
     }
-
+  
+    ul.parent li.parent-list .parent-list-container{
+        padding: 20px 0 16px 0;
+    }
    
+    ul li.parent-list{
+        padding-right: 12px;
+    }
+
+    ul.parent li.parent-list a{
+        font-size: 11px;
+    }
+
+    ul.parent li.parent-list .parent-list-container.active-link {
+        background-color: unset;
+    }
+
     
+}
+
+@media screen and (min-width:1280px){
+  
+    ul li.parent-list{
+        padding-right: 27px;
+    }
+
+    ul.parent li.parent-list a{
+        font-size: 12px;
+    }
 }
